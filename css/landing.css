@@ -260,3 +260,21 @@ h3 {
     transform: scale(1.1);
     z-index: 1;
 }
+
+
+/* grid end */
+
+
+/*offer*/
+
+.offerBanner {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin: 170px 0;
+    cursor: pointer;
+}
+
+.offerBanner img {
+    width: 100%;
+}
