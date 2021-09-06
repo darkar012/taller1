@@ -178,14 +178,14 @@ h3 {
     z-index: 1;
 }
 
-.carousel__title {
+.subtitles {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 5%;
 }
 
-.carousel__title img {
+.subtitles img {
     width: 7%;
     height: 13%;
     position: absolute;
@@ -206,4 +206,57 @@ h3 {
 
 .carousel .carousel-item img {
     width: 100%;
+}
+
+
+/* carousel end */
+
+
+/* grid start */
+
+.imageGrid {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.imageGrid .gallery {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.imageGrid .gallery .gallery__item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.imageGrid .gallery .gallery__item:nth-child(2) {
+    grid-column-start: span 2;
+}
+
+.imageGrid .gallery .gallery__item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.imageGrid .gallery .gallery__item img:hover {
+    filter: brightness(0.5);
+}
+
+.imageGrid .gallery .gallery__item:hover {
+    transform: scale(1.1);
+    z-index: 1;
 }
