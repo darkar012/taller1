@@ -167,3 +167,43 @@ p {
 
 
 /* banner end */
+
+
+/* carousel start */
+
+h3 {
+    font-family: 'Archivo Black';
+    font-size: 36px;
+    color: antiquewhite;
+    z-index: 1;
+}
+
+.carousel__title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.carousel__title img {
+    width: 7%;
+    height: 13%;
+    position: absolute;
+    left: 2%;
+}
+
+.carouselSection {
+    width: 100%;
+}
+
+.carousel {
+    height: 600px;
+}
+
+.carousel .carousel-item {
+    width: 450px;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+}
