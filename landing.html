@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./css/landing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
 <body>
     <nav class="navBar">
-        <figure class="logo"><img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo"></figure>
+        <figure class="logo">
+            <img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo">
+        </figure>
         <ul class="mainMenu">
             <li class="mainMenu__item mainMenu__item--selected">
                 <a id="homeLink" href="./landing.html">Home</a>
@@ -31,6 +33,7 @@
             <li class="mainMenu__item"><i class="fas fa-shopping-cart icon"></i></li>
         </ul>
     </nav>
+
     <header>
         <div class="banner">
             <div class="banner__content object" data-value="3">
@@ -54,17 +57,33 @@
             <input type="radio" name="bannerImage" value="Phone">
         </div>
     </header>
-    <div class="carouselSection">
+
+
+    <div class="carousel">
         <div class="subtitles">
             <img class="subtitle__rectangle" src="./images/Rectangle 6.png"></img>
             <h3>Best Sellers</h3>
         </div>
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="./images/headphones.png"></a>
-            <a class="carousel-item" href="#two!"><img src="./images/phone.png"></a>
-            <a class="carousel-item" href="#three!"><img src="./images/camera.png"></a>
-            <a class="carousel-item" href="#four!"><img src="./images/ps5.png"></a>
-            <a class="carousel-item" href="#five!"><img src="./images/TV.png"></a>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/camera.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/headphones.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/phone.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/ps5.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/TV.png" alt="">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <div class="imageGrid">
@@ -97,9 +116,12 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/app.js"></script>
 
 <!--parallax JS configuration-->
+<!--remover parallax
 <script>
     document.addEventListener("mousemove", parallax);
 
@@ -111,15 +133,9 @@
             move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
         });
     }
-</script>
+</script>-->
 <!--parallax JS configuration-->
-<script>
-    $(document).ready(function() {
-        $('.carousel').carousel({
-            indicators: true
-        });
-    });
-</script>
+
 
 
 </html>

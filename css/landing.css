@@ -172,6 +172,7 @@ p {
 /* carousel start */
 
 h3 {
+    margin-top: 20px;
     font-family: 'Archivo Black';
     font-size: 36px;
     color: antiquewhite;
@@ -192,19 +193,23 @@ h3 {
     left: 2%;
 }
 
-.carouselSection {
+.carousel {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.swiper {
+    margin-top: 70px;
     width: 100%;
 }
 
-.carousel {
-    height: 600px;
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100px;
 }
 
-.carousel .carousel-item {
-    width: 450px;
-}
-
-.carousel .carousel-item img {
+.swiper-slide img {
     width: 100%;
 }
 
