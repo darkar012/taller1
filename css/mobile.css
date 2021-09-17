@@ -1,0 +1,7 @@
+@media all and (max-width: 768px) {
+    .information__content {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 500px) {}

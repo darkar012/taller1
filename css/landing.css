@@ -10,6 +10,7 @@
 
 body {
     background-color: #1E1E2C;
+    overflow-x: hidden;
 }
 
 
@@ -128,6 +129,7 @@ h1 {
 
 p {
     font-family: 'Poppins';
+    color: antiquewhite;
 }
 
 .banner__paragraph--down,
@@ -225,12 +227,44 @@ h3 {
     width: 100%;
 }
 
+.watchMore {
+    padding-top: 20px;
+    width: 10%;
+}
+
+.watchMore a {
+    font-family: 'Poppins';
+    font-size: 1em;
+    color: antiquewhite;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.watchMore img {
+    width: 100%;
+}
+
+.watchMoreButton {
+    align-items: center;
+    margin: 0 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ellipse {
+    right: 10%;
+    top: 2%;
+    position: absolute;
+    width: 17%;
+    z-index: -2;
+}
+
 .imageGrid .gallery {
     position: relative;
     height: 100%;
     width: 70%;
     margin: auto;
-    padding: 45px 0;
+    padding: 5px 0;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 2vh;
@@ -241,6 +275,7 @@ h3 {
     position: relative;
     height: 100%;
     width: 100%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 89.9%, 90.5% 100%, 0 100%, 0% 80%, 0 0);
     overflow: hidden;
     transition: 0.3s ease-in-out;
 }
@@ -257,20 +292,46 @@ h3 {
     transition: 0.3s ease-in-out;
 }
 
-.imageGrid .gallery .gallery__item img:hover {
-    filter: brightness(0.5);
+.overlayGallery {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 89.9%, 90.5% 100%, 0 100%, 0% 80%, 0 0);
+    background: linear-gradient(188deg, rgba(0, 8, 19, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000813", endColorstr="#000000", GradientType=1);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.overlayGallery:hover {
+    opacity: 100%;
+}
+
+.overlayGallery h4 {
+    margin-top: 250px;
+    font-size: 1.6em !important;
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlayGallery:hover h4 {
+    transform: translateY(0);
 }
 
 .imageGrid .gallery .gallery__item:hover {
     transform: scale(1.1);
     z-index: 1;
+    /* filter: brightness(0.5);*/
 }
 
 
 /* grid end */
 
 
-/*offer*/
+/*offer starts*/
 
 .offerBanner {
     width: 100%;
@@ -283,3 +344,111 @@ h3 {
 .offerBanner img {
     width: 100%;
 }
+
+
+/*offer ends*/
+
+
+/*footer stars*/
+
+.information {
+    background-color: #111122;
+}
+
+.information__content {
+    padding-top: 10%;
+    margin-bottom: 10%;
+    padding-right: 5%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 7px;
+    margin-left: 5%;
+}
+
+.logo__description,
+.newsletter__description {
+    margin: 10px 0;
+}
+
+.logo__image img {
+    width: 170px;
+}
+
+h4 {
+    margin: 0;
+    padding: 0%;
+    font-family: 'Archivo Black';
+    font-size: 2em;
+    color: antiquewhite;
+}
+
+.logo hr {
+    background-color: antiquewhite;
+    position: absolute;
+    left: 0;
+    width: 20%;
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__list__item {
+    margin-top: 25px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.contact__list__item p {
+    margin-left: 20px;
+}
+
+.newsletter__suscription {
+    margin-top: 35px;
+}
+
+.suscription__email {
+    background-color: transparent;
+    color: antiquewhite;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+    width: 60%;
+    padding: 5px 0;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: antiquewhite;
+}
+
+.suscription__submit {
+    margin-left: 5%;
+    padding: 5px 20px;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+}
+
+.copyright a {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    color: antiquewhite;
+    margin-left: 5%;
+}
+
+
+/*footer ends*/

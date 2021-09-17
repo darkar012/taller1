@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">>
 
     <title>Document</title>
-    <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/mobile.css">
 
 </head>
 
 <body>
+    <!--navegation bar starts-->
     <nav class="navBar">
         <figure class="logo">
             <img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo">
@@ -33,7 +35,8 @@
             <li class="mainMenu__item"><i class="fas fa-shopping-cart icon"></i></li>
         </ul>
     </nav>
-
+    <!--navegation bar ends-->
+    <!--banner carousel starts-->
     <header>
         <div class="banner">
             <div class="banner__content object" data-value="3">
@@ -57,8 +60,8 @@
             <input type="radio" name="bannerImage" value="Phone">
         </div>
     </header>
-
-
+    <!--banner carousel ends-->
+    <!--products carousel starts-->
     <div class="carousel">
         <div class="subtitles">
             <img class="subtitle__rectangle" src="./images/Rectangle 6.png"></img>
@@ -86,56 +89,112 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
+    <!--products carousel ends-->
+    <!--play studios grid starts-->
     <div class="imageGrid">
         <div class="subtitles">
             <img class="subtitle__rectangle" src="./images/Rectangle 6.png"></img>
             <h3>Sony Studios</h3>
         </div>
+        <div class="watchMoreButton">
+            <div class="watchMore">
+                <a href="./landing.html">Watch More</a>
+                <img src="images/line_Arrow.png">
+            </div>
+            <img class="ellipse" src="./images/Ellipse.png">
+        </div>
         <div class="gallery">
             <div class="gallery__item">
+
                 <img src="./images/kratos.png" />
+                <div class="overlayGallery">
+                    <h4>God of War</h4>
+                </div>
             </div>
             <div class="gallery__item">
                 <img src="./images/FFRVII.png" />
+                <div class="overlayGallery">
+                    <h4>Final Fantasy VII Remake</h4>
+                </div>
             </div>
             <div class="gallery__item">
                 <img src="./images/daysGone.png" />
+                <div class="overlayGallery">
+                    <h4>Days Gone</h4>
+                </div>
             </div>
             <div class="gallery__item">
                 <img src="./images/tlou2.png" />
+                <div class="overlayGallery">
+                    <h4>The Last of Us 2</h4>
+                </div>
             </div>
             <div class="gallery__item">
                 <img src="./images/spidey.png" />
+                <div class="overlayGallery">
+                    <h4>Marvel's Spider-Man</h4>
+                </div>
             </div>
         </div>
     </div>
+    <!--play studios grid ends-->
+    <!--offer starts-->
     <figure class="offerBanner">
         <img src="./images/offer.png">
     </figure>
+    <!--offer ends-->
+    <!--footer starts-->
+    <footer class="information">
+        <div class="information__content">
+            <div class="logo">
+                <figure class="logo__image"><img src="./images/sony.png" alt=""></figure>
+                <p class="logo__description">We are a big family of technology to your house</p>
+                <hr>
+            </div>
+            <div class="contact">
+                <h4>Contact Us</h4>
+                <ul class="contact__list">
+                    <li class="contact__list__item">
+                        <i class="fas icon fa-phone-alt"></i>
+                        <p>(+1) 1967979101</p>
+                    </li>
+                    <li class="contact__list__item">
+                        <i class="far icon fa-envelope"></i>
+                        <p>SonyEnterprise@gmail.com</p>
+                    </li>
+                    <li class="contact__list__item">
+                        <i class="fas icon fa-map-marker-alt"></i>
+                        <p>Silicon Valley, USA</p>
+                    </li>
+                    <li class="contact__list__item">
+                        <i class="far icon fa-calendar"></i>
+                        <p>Monday to Friday</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <p class="newsletter__description">Don't miss out on anything, subscribe to our newsletter</p>
+                <div class="newsletter__suscription">
+                    <input class="suscription__email" type="text" placeholder="Write your E-mail">
+                    <input class="suscription__submit" type="submit" value="Suscribe">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>Copyright 2021 SONY.</p>
+            <a href="./landing.html"> Privacy</a>
+            <a href="./landing.html"> Terms of Use</a>
 
+        </div>
+    </footer>
+    <!--footer ends-->
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/app.js"></script>
-
-<!--parallax JS configuration-->
-<!--remover parallax
-<script>
-    document.addEventListener("mousemove", parallax);
-
-    function parallax(e) {
-        document.querySelectorAll(".object").forEach(function(move) {
-            var moving_value = move.getAttribute("data-value");
-            var x = (e.clientX * moving_value) / 150;
-            var y = (e.clientY * moving_value) / 150;
-            move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
-        });
-    }
-</script>-->
-<!--parallax JS configuration-->
-
-
 
 </html>

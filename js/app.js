@@ -1,9 +1,3 @@
-$(document).ready(function() {
-    $('.carousel').carousel({
-        indicators: true
-    });
-});
-
 var swiper = new Swiper('.swiper', {
     effect: 'coverflow',
     grabCursor: true,
