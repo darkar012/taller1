@@ -56,11 +56,6 @@
          display: flex;
          justify-content: center;
      }
-      :root {
-         --primary-color: rgba(13, 110, 139, 0.75);
-         --overlay-color: rgba(24, 39, 51, 0.85);
-         --menu-speed: 0.75s;
-     }
      .menuMobile__bar {
          width: 1000px;
          height: 70px;
@@ -152,7 +147,7 @@
      }
      .menu-wrap .toggler:checked~.menu>div {
          transform: scale(1);
-         transition-duration: var(--menu-speed);
+         transition-duration: 0.75s;
      }
      .menu-wrap .toggler:checked~.menu>div>div {
          opacity: 1;
@@ -172,7 +167,7 @@
          justify-content: center;
      }
      .menu-wrap .menu>div {
-         background: var(--overlay-color);
+         background: rgba(30, 30, 44, 0.85);
          border-radius: 50%;
          width: 200vw;
          height: 200vw;
