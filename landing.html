@@ -15,26 +15,62 @@
 </head>
 
 <body>
+
     <!--navegation bar starts-->
     <nav class="navBar">
-        <figure class="logo">
-            <img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo">
-        </figure>
-        <div class="menuC"></div>
-        <ul class="mainMenu">
-            <li class="mainMenu__item mainMenu__item--selected">
-                <a id="homeLink" href="./landing.html">Home</a>
-            </li>
-            <li class="mainMenu__item"><a href="./landing.html">Consoles</a></li>
-            <li class="mainMenu__item"><a href="./landing.html">Audio</a></li>
-            <li class="mainMenu__item"><a href="./landing.html">Photography</a></li>
-        </ul>
+        <div class="menuMobile">
+            <div class="menuMobile__bar"></div>
+            <figure class="logo logoMobile">
+                <img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo">
+            </figure>
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li class="mainMenu__item">
+                                    <a id="homeLink" href="./landing.html">Home</a>
+                                </li>
+                                <li class="mainMenu__item"><a href="./landing.html">Consoles</a></li>
+                                <li class="mainMenu__item"><a href="./landing.html">Audio</a></li>
+                                <li class="mainMenu__item"><a href="./landing.html">Photography</a></li>
+                            </ul>
 
-        <ul class="mainMenu">
-            <li class="mainMenu__item"><i class="fas fa-search icon"></i></li>
-            <li class="mainMenu__item--signIn"><a id="signIn" href="./landing.html">Sign In</a></li>
-            <li class="mainMenu__item"><i class="fas fa-shopping-cart icon"></i></li>
-        </ul>
+                            <ul class="signInMenu">
+                                <li class="signInMenu__item"><i class="fas fa-search icon"></i></li>
+                                <li class="signInMenu__item--signIn"><a id="signIn" href="./landing.html">Sign In</a></li>
+                                <li class="signInMenu__item"><i class="fas fa-shopping-cart icon"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="menuPc">
+            <figure class="logo">
+                <img class="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sony_logo_%28white%29.svg/1200px-Sony_logo_%28white%29.svg.png" alt="Sony's logo">
+            </figure>
+
+            <ul class="mainMenu">
+                <li class="mainMenu__item mainMenu__item--selected">
+                    <a id="homeLink" href="./landing.html">Home</a>
+                </li>
+                <li class="mainMenu__item"><a href="./landing.html">Consoles</a></li>
+                <li class="mainMenu__item"><a href="./landing.html">Audio</a></li>
+                <li class="mainMenu__item"><a href="./landing.html">Photography</a></li>
+            </ul>
+
+            <ul class="mainMenu">
+                <li class="mainMenu__item"><i class="fas fa-search icon"></i></li>
+                <li class="mainMenu__item--signIn"><a id="signIn" href="./landing.html">Sign In</a></li>
+                <li class="mainMenu__item"><i class="fas fa-shopping-cart icon"></i></li>
+            </ul>
+        </div>
     </nav>
     <!--navegation bar ends-->
     <!--banner carousel starts-->
@@ -111,7 +147,7 @@
         </div>
 
         <div class="swiper-pagination swiper-pagination__banner"></div>
-        </div>
+
     </header>
     <!--banner carousel ends-->
     <!--products carousel starts-->
@@ -244,6 +280,8 @@
 
         </div>
     </footer>
+
+
     <!--footer ends-->
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>

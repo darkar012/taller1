@@ -30,6 +30,20 @@ body {
     justify-content: space-between;
 }
 
+.menuPc {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.125em;
+    background: #1E1E2C;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 5%;
+    justify-content: space-between;
+}
+
 .mainMenu {
     display: flex;
     flex-direction: row;
@@ -474,3 +488,7 @@ h4 {
 
 
 /*footer ends*/
+
+.menuMobile {
+    display: none;
+}
