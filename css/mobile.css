@@ -1,4 +1,4 @@
-@media all and (max-width:1024px) {
+@media all and (max-width:1030px) {
     /*Ipad portrait*/
     body {
         font-size: 0.85em;
@@ -35,6 +35,23 @@
     }
 }
 
+@media all and (max-width:950px) {
+    body {
+        font-size: 0.77em;
+    }
+}
+
+@media all and (max-width:812px) {
+    body {
+        font-size: 0.7em;
+    }
+    .banner__background--image {
+        object-fit: contain;
+    }
+}
+
+
+/*
 @media all and (max-width: 500px) {
     .offerBanner {
         display: none;
