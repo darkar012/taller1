@@ -1,14 +1,37 @@
-@media all and (max-width:768px) {
+@media all and (max-width:1024px) {
     /*Ipad portrait*/
-    .imageGrid {
-        height: auto;
+    body {
+        font-size: 0.85em;
     }
     .imageGrid .gallery {
-        height: 500px;
+        height: 100%;
         grid-template-columns: auto auto;
     }
+    .banner__background--image {
+        right: 0%
+    }
+    h3 {
+        margin-top: 26px;
+    }
+    .subtitles img {
+        width: 10%;
+        height: 13%;
+    }
+    .subtitle__rectangle--grid {
+        height: 9.5% !important;
+    }
+    .ellipse {
+        right: 12%;
+        top: 3%;
+    }
     .information__content {
-        flex-direction: column;
+        padding-right: 2%;
+    }
+    .contact {
+        padding-right: 30px;
+    }
+    .copyright p {
+        padding-top: 5px;
     }
 }
 

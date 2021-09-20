@@ -18,7 +18,8 @@ var swiper = new Swiper('.swiper', {
 
 var yolo = new Swiper(".mySwiper", {
     effect: "fade",
-
+    loop: true,
+    autoplay: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

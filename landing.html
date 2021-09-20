@@ -39,90 +39,78 @@
     <!--navegation bar ends-->
     <!--banner carousel starts-->
     <header>
-        <!--
-        <div class="banner">
-            <div class="banner__content object" data-value="3">
-                <h1 class="banner__title">A new</h1>
-                <h1 class="banner__title--down">state of play</h1>
-                <p class="banner__paragraph">The new PS5 is waiting for you. More power, more</p>
-                <p class="banner__paragraph--down">definition, more play. What are you waiting for?</p>
-
-                <div class="banner__buttons">
-                    <button class="banner__buyNow">Buy now</button>
-                    <button class="banner__seeMore">See more</button>
-                </div>
-            </div>
-            <figure class="banner__background"><img class="banner__background--image object" data-value="-2" src="./images/Group 43.png" alt="background for parallax effect">
-                <img class="banner__front--image object" data-value="1" src="./images/image 28.png" alt="background for parallax effect"></figure>
-        </div>
-        <div class="banner__input">
-            <input type="radio" name="bannerImage" value="PS5">
-            <input type="radio" name="bannerImage" value="Headphones">
-            <input type="radio" name="bannerImage" value="Camera">
-            <input type="radio" name="bannerImage" value="Phone">
-        </div>-->
 
         <div class="mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="banner">
-                        <div class="banner__content object">
-                            <h1 class="banner__title">A new</h1>
-                            <h1 class="banner__title--down">state of play</h1>
-                            <p class="banner__paragraph">The new PS5 is waiting for you. More power, more</p>
-                            <p class="banner__paragraph--down">definition, more play. What are you waiting for?</p>
+                        <div class="contentText">
+                            <div class="banner__content">
+                                <h1 class="banner__title">A new</h1>
+                                <h1 class="banner__title--down">state of play</h1>
+                                <p class="banner__paragraph">The new PS5 is waiting for you. More power, more</p>
+                                <p class="banner__paragraph--down">definition, more play. What are you waiting for?</p>
 
-                            <div class="banner__buttons">
-                                <button class="banner__buyNow">Buy now</button>
-                                <button class="banner__seeMore">See more</button>
+                                <div class="banner__buttons">
+                                    <button class="banner__buyNow">Buy now</button>
+                                    <button class="banner__seeMore">See more</button>
+                                </div>
                             </div>
                         </div>
 
+                        <figure class="banner__background"><img class="banner__background--image" src="./images/provePs5.jpg" alt="background ps5">
+                        </figure>
+                        <div id='show_bg_2'></div>
                     </div>
-                    <div id='show_bg_2'></div>
-                    <figure class="banner__background"><img class="banner__background--image" src="./images/provePs5.jpg" alt="background ps5">
-                    </figure>
+
                 </div>
                 <div class="swiper-slide">
                     <div class="banner">
-                        <div class="banner__content object">
-                            <h1 class="banner__title">Sony Xperia</h1>
-                            <h1 class="banner__title--down">Connecting People</h1>
-                            <p class="banner__paragraph">Sony focuses on bringing technology to the hands of</p>
-                            <p class="banner__paragraph--down">its customers, connecting and making their lives better</p>
+                        <div class="contentText">
+                            <div class="banner__content">
 
-                            <div class="banner__buttons">
-                                <button class="banner__buyNow">Buy now</button>
-                                <button class="banner__seeMore">See more</button>
+                                <h1 class="banner__title">Sony Xperia</h1>
+                                <h1 class="banner__title--down">Connecting People</h1>
+                                <p class="banner__paragraph">Sony focuses on bringing technology to the hands of</p>
+                                <p class="banner__paragraph--down">its customers, connecting and making their lives better</p>
+
+                                <div class="banner__buttons">
+                                    <button class="banner__buyNow">Buy now</button>
+                                    <button class="banner__seeMore">See more</button>
+                                </div>
                             </div>
+
                         </div>
-                        <div id='show_bg_2'></div>
                         <figure class="banner__background"><img class="banner__background--image" src="./images/proveCelular.png" alt="background ps5">
                         </figure>
+                        <div id='show_bg_2'></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="banner">
-                        <div class="banner__content object">
-                            <h1 class="banner__title">Preserve the</h1>
-                            <h1 class="banner__title--down">good vibes</h1>
-                            <p class="banner__paragraph">Capture the good times, preserve the best memories.</p>
-                            <p class="banner__paragraph--down">Quality at your fingertips, Sony Cameras</p>
+                        <div class="contentText">
+                            <div class="banner__content">
+                                <h1 class="banner__title">Preserve the</h1>
+                                <h1 class="banner__title--down">good vibes</h1>
+                                <p class="banner__paragraph">Capture the good times, preserve the best memories.</p>
+                                <p class="banner__paragraph--down">Quality at your fingertips, Sony Cameras</p>
 
-                            <div class="banner__buttons">
-                                <button class="banner__buyNow">Buy now</button>
-                                <button class="banner__seeMore">See more</button>
+                                <div class="banner__buttons">
+                                    <button class="banner__buyNow">Buy now</button>
+                                    <button class="banner__seeMore">See more</button>
+                                </div>
                             </div>
-
                         </div>
-                        <div id='show_bg_2'></div>
                         <figure class="banner__background"></figure><img class="banner__background--image" src="./images/proveCamera.png" alt="background ps5">
                         </figure>
+                        <div id='show_bg_2'></div>
                     </div>
+
                 </div>
             </div>
+        </div>
 
-            <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination__banner"></div>
         </div>
     </header>
     <!--banner carousel ends-->
@@ -132,7 +120,7 @@
             <img class="subtitle__rectangle" src="./images/Rectangle 6.png"></img>
             <h3>Best Sellers</h3>
         </div>
-        <div class="swiper">
+        <div class="swiper carouselSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./images/camera.png" alt="">
@@ -151,53 +139,55 @@
                 </div>
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination "></div>
         </div>
     </div>
     <!--products carousel ends-->
     <!--play studios grid starts-->
     <div class="imageGrid">
         <div class="subtitles">
-            <img class="subtitle__rectangle" src="./images/Rectangle 6.png"></img>
+            <img class="subtitle__rectangle--grid" src="./images/Rectangle 6.png"></img>
             <h3>Sony Studios</h3>
         </div>
-        <div class="watchMoreButton">
-            <div class="watchMore">
-                <a href="./landing.html">Watch More</a>
-                <img src="images/line_Arrow.png">
+        <div class="galleryButton">
+            <div class="watchMoreButton">
+                <div class="watchMore">
+                    <a href="./landing.html">Watch More</a>
+                    <img src="images/line_Arrow.png">
+                </div>
+                <img class="ellipse" src="./images/Ellipse.png">
             </div>
-            <img class="ellipse" src="./images/Ellipse.png">
-        </div>
-        <div class="gallery">
-            <div class="gallery__item">
+            <div class="gallery">
+                <div class="gallery__item">
 
-                <img src="./images/kratos.png" />
-                <div class="overlayGallery">
-                    <h4>God of War</h4>
+                    <img src="./images/kratos.png" />
+                    <div class="overlayGallery">
+                        <h4>God of War</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery__item">
-                <img src="./images/FFRVII.png" />
-                <div class="overlayGallery">
-                    <h4>Final Fantasy VII Remake</h4>
+                <div class="gallery__item">
+                    <img src="./images/FFRVII.png" />
+                    <div class="overlayGallery">
+                        <h4>Final Fantasy VII Remake</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery__item">
-                <img src="./images/daysGone.png" />
-                <div class="overlayGallery">
-                    <h4>Days Gone</h4>
+                <div class="gallery__item">
+                    <img src="./images/daysGone.png" />
+                    <div class="overlayGallery">
+                        <h4>Days Gone</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery__item">
-                <img src="./images/tlou2.png" />
-                <div class="overlayGallery">
-                    <h4>The Last of Us 2</h4>
+                <div class="gallery__item">
+                    <img src="./images/tlou2.png" />
+                    <div class="overlayGallery">
+                        <h4>The Last of Us 2</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery__item">
-                <img src="./images/spidey.png" />
-                <div class="overlayGallery">
-                    <h4>Marvel's Spider-Man</h4>
+                <div class="gallery__item">
+                    <img src="./images/spidey.png" />
+                    <div class="overlayGallery">
+                        <h4>Marvel's Spider-Man</h4>
+                    </div>
                 </div>
             </div>
         </div>
