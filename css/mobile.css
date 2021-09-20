@@ -285,14 +285,30 @@
      .banner__background--image {
          object-fit: contain;
      }
-     .banner__paragraph--down,
      .banner__title--down {
          margin-bottom: 10px;
      }
+     .banner__content p {
+         display: none;
+     }
      .banner__buyNow,
      .banner__seeMore {
+         font-size: 1.5em;
          padding: 5px 10px;
          margin-right: 10px;
+     }
+     h3 {
+         margin-top: 20px;
+         margin-left: 10px;
+         font-size: 3.5em;
+     }
+     .subtitle__rectangle--carousel {
+         height: 8% !important;
+         width: 17% !important;
+     }
+     .subtitle__rectangle--grid {
+         height: 15% !important;
+         width: 17% !important;
      }
  }
  /*
