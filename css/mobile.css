@@ -1,7 +1,34 @@
-@media all and (max-width: 768px) {
+@media all and (max-width:768px) {
+    /*Ipad portrait*/
+    .imageGrid {
+        height: auto;
+    }
+    .imageGrid .gallery {
+        height: 500px;
+        grid-template-columns: auto auto;
+    }
     .information__content {
         flex-direction: column;
     }
 }
 
-@media all and (max-width: 500px) {}
+@media all and (max-width: 500px) {
+    .offerBanner {
+        display: none;
+    }
+    .imageGrid .gallery {
+        padding-bottom: 50px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .information__content {
+        padding-left: 25px;
+    }
+    .logo hr {
+        display: none;
+    }
+    .information__content div {
+        margin-bottom: 20px;
+    }
+}

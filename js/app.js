@@ -1,6 +1,7 @@
 var swiper = new Swiper('.swiper', {
     effect: 'coverflow',
     grabCursor: true,
+    loop: true,
     centeredSlides: true,
     slidesPerView: '3',
     coverflowEffect: {
@@ -13,4 +14,13 @@ var swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
     },
+});
+
+var yolo = new Swiper(".mySwiper", {
+    effect: "fade",
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
 });

@@ -19,14 +19,14 @@ body {
 .navBar {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125em;
     background: #1E1E2C;
     height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 5%;
     justify-content: space-between;
 }
 
@@ -84,34 +84,37 @@ body {
 /* banner start */
 
 header {
-    background-size: cover;
-    height: 120vh;
+    position: relative;
+    height: 130vh;
+    width: 100%;
 }
 
 .banner {
-    position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: stretch;
+    height: 130vh;
     overflow: hidden;
 }
 
-.banner__background img {
-    position: absolute;
-    object-fit: contain;
-}
-
 .banner__background--image {
-    top: 0%;
-    right: -1%;
-    width: 95%;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
-.banner__front--image {
-    top: 15%;
-    right: 10%;
-    height: 700px;
+#show_bg_2 {
+    background: rgb(30, 30, 44);
+    background: -moz-linear-gradient(180deg, rgba(30, 30, 44, 1) 0%, rgba(30, 30, 44, 0.5) 20%, rgba(30, 30, 44, 0) 50%, rgba(30, 30, 44, 0.5) 80%, rgba(30, 30, 44, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(30, 30, 44, 1) 0%, rgba(30, 30, 44, 0.5) 20%, rgba(30, 30, 44, 0) 50%, rgba(30, 30, 44, 0.5) 80%, rgba(30, 30, 44, 1) 100%);
+    background: linear-gradient(180deg, rgba(30, 30, 44, 1) 0%, rgba(30, 30, 44, 0.5) 20%, rgba(30, 30, 44, 0) 50%, rgba(30, 30, 44, 0.5) 80%, rgba(30, 30, 44, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#1e1e2c", endColorstr="#1e1e2c", GradientType=1);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    object-fit: cover;
 }
 
 .banner__content {
@@ -124,7 +127,7 @@ header {
 
 h1 {
     font-family: 'Archivo Black';
-    font-size: 64px;
+    font-size: 4em;
 }
 
 p {
@@ -141,7 +144,7 @@ p {
 .banner__seeMore {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125em;
     border: none;
     padding: 7px 15px;
     margin-right: 20px;
@@ -176,7 +179,7 @@ p {
 h3 {
     margin-top: 20px;
     font-family: 'Archivo Black';
-    font-size: 36px;
+    font-size: 2.25em;
     color: antiquewhite;
     z-index: 1;
 }
@@ -200,7 +203,8 @@ h3 {
     margin-bottom: 70px;
 }
 
-.swiper {
+.swiper,
+.mySwiper {
     margin-top: 70px;
     width: 100%;
 }
@@ -210,6 +214,13 @@ h3 {
     background-size: cover;
     width: 100px;
 }
+
+
+/*
+.swiper-slide:hover img {
+    transform: translateX(-100px) scale(0.8);
+}
+*/
 
 .swiper-slide img {
     width: 100%;
