@@ -264,6 +264,37 @@
          justify-content: center;
      }
  }
+ 
+ @media all and (max-width:768px) {
+     body {
+         font-size: 0.72em;
+     }
+     .signInMenu {
+         padding-top: 50px;
+         display: flex;
+     }
+     .subtitle__rectangle--carousel {
+         height: 7.5% !important;
+     }
+ }
+ 
+ @media all and (max-width:500px) {
+     body {
+         font-size: 0.4em;
+     }
+     .banner__background--image {
+         object-fit: contain;
+     }
+     .banner__paragraph--down,
+     .banner__title--down {
+         margin-bottom: 10px;
+     }
+     .banner__buyNow,
+     .banner__seeMore {
+         padding: 5px 10px;
+         margin-right: 10px;
+     }
+ }
  /*
 @media all and (max-width: 500px) {
     .offerBanner {
