@@ -41,7 +41,7 @@
      }
  }
  
- @media all and (max-width:812px) {
+ @media all and (max-width:850px) {
      .menuPc {
          display: none;
      }
@@ -326,7 +326,7 @@
          margin-top: 40px;
      }
      .overlayGallery h4 {
-         font-size: 1.7em;
+         font-size: 1.8em;
          margin-top: 80px;
      }
      .watchMore,
