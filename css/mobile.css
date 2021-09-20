@@ -48,6 +48,18 @@
     .banner__background--image {
         object-fit: contain;
     }
+    .subtitle__rectangle--carousel {
+        height: 21% !important;
+    }
+    h3 {
+        margin-top: 23px;
+    }
+    .offerBanner {
+        display: none;
+    }
+    .imageGrid {
+        margin-bottom: 50px;
+    }
 }
 
 
