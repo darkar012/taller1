@@ -12,7 +12,7 @@ h5 {
 .breadscrumbs {
     display: flex;
     flex-direction: row;
-    color: aliceblue;
+    color: white;
     margin-left: 8.4%;
     margin-top: 30px;
     align-items: center;
@@ -21,7 +21,7 @@ h5 {
     }
     a {
         font-family: 'Poppins', sans-serif;
-        color: aliceblue;
+        color: white;
         font-size: 1.125 em;
         font-weight: 600;
     }
@@ -69,7 +69,7 @@ h5 {
         bottom: 169px;
         font-family: "Poppins", sans-serif;
         font-size: 1.125em;
-        color: aliceblue;
+        color: white;
     }
     &__favorite {
         position: absolute;
@@ -105,31 +105,70 @@ h5 {
     margin-right: 10px;
 }
 
-.custom-radio-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    font-family: arial;
-    &__show--checkbox {
-        background-image: url("../images/noFav.png");
+.ordersFilters {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4%;
+    h5 {
+        margin-bottom: 15px;
     }
-    &__show--radio {
-        background-image: url("../images/noFav.png");
+    .orders {
+        hr {
+            margin-top: 10px;
+            background-color: white;
+        }
+        .filters__selection {
+            width: 260px;
+            .arrow {
+                right: 0px;
+            }
+        }
     }
-    &__input {
-        display: none;
+    .filters {
+        display: flex;
+        flex-direction: row;
     }
-    &__show {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-right: .5rem;
-        background-size: cover;
+    .filters__selection {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 180px;
+        margin-right: 20px;
+        .select {
+            width: 100%;
+            z-index: 2;
+            background: none;
+            color: #fafafa;
+            font-family: "Poppins";
+            font-size: 1.05em;
+            font-weight: 300;
+            outline: 0px;
+            border: 0px;
+            option {
+                color: #fafafa;
+                background-color: #1E1E2C;
+            }
+        }
+        .arrow {
+            position: absolute;
+            right: 4px;
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            border-width: .6vmin .6vmin 0 0;
+            border-style: solid;
+            border-color: #fafafa;
+            transform: rotate(-45deg);
+        }
     }
-    &__input:checked+&__show--checkbox {
-        background-image: url("../images/fav.png");
-    }
-    &__show--radio:checked+&__show--radio {
-        background-image: url("../images/fav.png");
-    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

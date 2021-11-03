@@ -17,7 +17,7 @@ h5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: aliceblue;
+  color: white;
   margin-left: 8.4%;
   margin-top: 30px;
   -webkit-box-align: center;
@@ -31,7 +31,7 @@ h5 {
 
 .breadscrumbs a {
   font-family: 'Poppins', sans-serif;
-  color: aliceblue;
+  color: white;
   font-size: 1.125 em;
   font-weight: 600;
 }
@@ -88,7 +88,7 @@ h5 {
   bottom: 169px;
   font-family: "Poppins", sans-serif;
   font-size: 1.125em;
-  color: aliceblue;
+  color: white;
 }
 
 .product__favorite {
@@ -129,42 +129,96 @@ h5 {
   margin-right: 10px;
 }
 
-.custom-radio-checkbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  font-family: arial;
+.ordersFilters {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 4%;
 }
 
-.custom-radio-checkbox__show--checkbox {
-  background-image: url("../images/noFav.png");
+.ordersFilters h5 {
+  margin-bottom: 15px;
 }
 
-.custom-radio-checkbox__show--radio {
-  background-image: url("../images/noFav.png");
+.ordersFilters .orders hr {
+  margin-top: 10px;
+  background-color: white;
 }
 
-.custom-radio-checkbox__input {
-  display: none;
+.ordersFilters .orders .filters__selection {
+  width: 260px;
 }
 
-.custom-radio-checkbox__show {
-  display: inline-block;
+.ordersFilters .orders .filters__selection .arrow {
+  right: 0px;
+}
+
+.ordersFilters .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ordersFilters .filters__selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 180px;
+  margin-right: 20px;
+}
+
+.ordersFilters .filters__selection .select {
+  width: 100%;
+  z-index: 2;
+  background: none;
+  color: #fafafa;
+  font-family: "Poppins";
+  font-size: 1.05em;
+  font-weight: 300;
+  outline: 0px;
+  border: 0px;
+}
+
+.ordersFilters .filters__selection .select option {
+  color: #fafafa;
+  background-color: #1E1E2C;
+}
+
+.ordersFilters .filters__selection .arrow {
+  position: absolute;
+  right: 4px;
+  top: 7px;
   width: 15px;
   height: 15px;
-  margin-right: .5rem;
-  background-size: cover;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  border-width: .6vmin .6vmin 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-.custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--checkbox {
-  background-image: url("../images/fav.png");
-}
-
-.custom-radio-checkbox__show--radio:checked + .custom-radio-checkbox__show--radio {
-  background-image: url("../images/fav.png");
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 /*# sourceMappingURL=products.css.map */
