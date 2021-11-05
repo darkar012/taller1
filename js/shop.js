@@ -1,5 +1,8 @@
 const productSection = document.getElementById("productGallery");
 
+const typeFirst = 0;
+const discountFirst = 0;
+
 const products = [{
         name: "PlayStation 5",
         price: 499.99,
@@ -13,6 +16,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "Time to play at the next level",
+        relevance: 1,
     },
     {
         name: "SRS-XB23",
@@ -27,6 +31,7 @@ const products = [{
         discount: "20Discount",
         stock: "Stock",
         description: "EXTRA BASS™ Portable Bluetooth® Wireless Speaker",
+        relevance: 2,
     },
     {
         name: "Xperia 5 II",
@@ -41,6 +46,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "120Hz HDR OLED triple camera array smartphone with ZEISS® optics",
+        relevance: 3,
     },
     {
         name: "ZV-1",
@@ -55,6 +61,7 @@ const products = [{
         discount: "10Discount",
         stock: "Stock",
         description: "Sony ZV-1 Camera for Content Creators and Vloggers",
+        relevance: 4,
     },
     {
         name: "XR-85Z9J",
@@ -69,6 +76,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "BRAVIA XR Z9J 8K HDR Full Array LED with Smart Google TV (2021)",
+        relevance: 5,
     },
     {
         name: "MDR-ZX310AP",
@@ -83,6 +91,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "Wired On-ear Folding Headphones with Microphone",
+        relevance: 6,
     },
     {
         name: "Far Cry 6",
@@ -97,6 +106,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "Fight alongside a modern-day guerrilla revolution to liberate Yara!",
+        relevance: 7,
     },
     {
         name: "ICD-PX470",
@@ -111,6 +121,7 @@ const products = [{
         discount: "",
         stock: "noStock",
         description: "Stereo Digital Voice Recorder with Built-in USB",
+        relevance: 8,
     },
     {
         name: "NW-A55",
@@ -125,6 +136,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "Take music to the next level with incredible High-Resolution Audio fidelity",
+        relevance: 9,
     },
     {
         name: "Xperia 1 III",
@@ -136,7 +148,9 @@ const products = [{
         isStock: true,
         isLarge: true,
         type: "Phones",
+        stock: "Stock",
         description: "Update you to the Sony Xperience 1 III",
+        relevance: 10,
     },
     {
         name: "Spider-Man: Miles Morales",
@@ -151,6 +165,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "With great power, there must also come great responsibility",
+        relevance: 11,
     },
     {
         name: "ILME-FX6V",
@@ -165,6 +180,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "Includes a full-frame image sensor to expand your cinematic creativity",
+        relevance: 12,
     },
     {
         name: "BDP-S6700",
@@ -179,6 +195,7 @@ const products = [{
         discount: "50Discount",
         stock: "Stock",
         description: "Blu-ray™ Player with 4K Upscaling and Wi/Fi for Streaming Video",
+        relevance: 13,
     },
     {
         name: "Final Fantasy VII remake",
@@ -193,6 +210,7 @@ const products = [{
         discount: "",
         stock: "Stock",
         description: "A new adaptation of the masterpiece of the Japanese role",
+        relevance: 14,
     },
 ];
 
@@ -259,6 +277,7 @@ filterByDiscount.addEventListener("click", () => {
 
 filterByDiscount.addEventListener("change", (e) => {
     loadProducts();
+    discountFirst += 1;
 });
 
 filterByType.addEventListener("click", () => {
@@ -268,6 +287,7 @@ filterByType.addEventListener("click", () => {
 
 filterByType.addEventListener("change", (e) => {
     loadProducts();
+    typeFirst += 1;
 });
 
 const orderBySelect = document.getElementById("orderBy");
@@ -284,44 +304,62 @@ const loadProducts = () => {
 
     productSection.innerHTML = "";
 
-    let filteredProductsByType;
+    let filteredProductsByType = products;
 
-    if (type !== "All products" || type !== "") {
+    if (type === "All products" || type === "") {
+        filteredProductsByType;
+    } else {
         filteredProductsByType = products.filter(
             (product) => product.type === type
         );
-    } else {
-        filteredProductsByType = products;
     }
 
-    if (discount === "Stock" || discount === "noStock") {
-        filteredProductsByType = products.filter(
-            (product) => product.stock === discount
-        );
-    } else if (discount === "All products" || discount === "") {
-        filteredProductsByType = products;
+    if (discount === "All products" || discount === "") {
+        filteredProductsByType;
     } else {
-        filteredProductsByType = products.filter(
-            (product) => product.discount === discount
-        );
+        if (discount === "Stock" || discount === "noStock") {
+            filteredProductsByType = filteredProductsByType.filter(
+                (product) => product.stock === discount
+            );
+        } else {
+            filteredProductsByType = filteredProductsByType.filter(
+                (product) => product.discount === discount
+            );
+        }
     }
 
     if (order === "PriceLow") {
-        filteredProductsByType = filteredProductsByType.sort((a, b) => a.price - b.price);
+        filteredProductsByType = filteredProductsByType.sort(
+            (a, b) => a.price - b.price
+        );
     } else if (order === "PriceHigh") {
-        filteredProductsByType = filteredProductsByType.sort((a, b) => b.price - a.price);
+        filteredProductsByType = filteredProductsByType.sort(
+            (a, b) => b.price - a.price
+        );
     } else if (order === "AlfabeticD") {
         filteredProductsByType = filteredProductsByType.sort(function(a, b) {
-            if (a.name < b.name) { return -1; }
-            if (a.name > b.name) { return 1; }
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
             return 0;
         });
     } else if (order === "AlfabeticA") {
         filteredProductsByType = filteredProductsByType.sort(function(a, b) {
-            if (a.name > b.name) { return -1; }
-            if (a.name < b.name) { return 1; }
+            if (a.name > b.name) {
+                return -1;
+            }
+            if (a.name < b.name) {
+                return 1;
+            }
             return 0;
         });
+    } else {
+        filteredProductsByType = filteredProductsByType.sort(
+            (a, b) => a.relevance - b.relevance
+        );
     }
 
     filteredProductsByType.forEach((product) => {
