@@ -1,7 +1,7 @@
 const productSection = document.getElementById("productGallery");
 
-const typeFirst = 0;
-const discountFirst = 0;
+let isFav = false;
+let isAdd = false;
 
 const products = [{
         name: "PlayStation 5",
@@ -17,6 +17,7 @@ const products = [{
         stock: "Stock",
         description: "Time to play at the next level",
         relevance: 1,
+        addShopCart: false
     },
     {
         name: "SRS-XB23",
@@ -32,6 +33,7 @@ const products = [{
         stock: "Stock",
         description: "EXTRA BASS™ Portable Bluetooth® Wireless Speaker",
         relevance: 2,
+        addShopCart: false
     },
     {
         name: "Xperia 5 II",
@@ -47,6 +49,7 @@ const products = [{
         stock: "Stock",
         description: "120Hz HDR OLED triple camera array smartphone with ZEISS® optics",
         relevance: 3,
+        addShopCart: false
     },
     {
         name: "ZV-1",
@@ -62,6 +65,7 @@ const products = [{
         stock: "Stock",
         description: "Sony ZV-1 Camera for Content Creators and Vloggers",
         relevance: 4,
+        addShopCart: false
     },
     {
         name: "XR-85Z9J",
@@ -77,6 +81,7 @@ const products = [{
         stock: "Stock",
         description: "BRAVIA XR Z9J 8K HDR Full Array LED with Smart Google TV (2021)",
         relevance: 5,
+        addShopCart: false
     },
     {
         name: "MDR-ZX310AP",
@@ -92,6 +97,7 @@ const products = [{
         stock: "Stock",
         description: "Wired On-ear Folding Headphones with Microphone",
         relevance: 6,
+        addShopCart: false
     },
     {
         name: "Far Cry 6",
@@ -107,6 +113,7 @@ const products = [{
         stock: "Stock",
         description: "Fight alongside a modern-day guerrilla revolution to liberate Yara!",
         relevance: 7,
+        addShopCart: false
     },
     {
         name: "ICD-PX470",
@@ -122,6 +129,7 @@ const products = [{
         stock: "noStock",
         description: "Stereo Digital Voice Recorder with Built-in USB",
         relevance: 8,
+        addShopCart: false
     },
     {
         name: "NW-A55",
@@ -137,6 +145,7 @@ const products = [{
         stock: "Stock",
         description: "Take music to the next level with incredible High-Resolution Audio fidelity",
         relevance: 9,
+        addShopCart: false
     },
     {
         name: "Xperia 1 III",
@@ -151,6 +160,7 @@ const products = [{
         stock: "Stock",
         description: "Update you to the Sony Xperience 1 III",
         relevance: 10,
+        addShopCart: false
     },
     {
         name: "Spider-Man: Miles Morales",
@@ -166,6 +176,7 @@ const products = [{
         stock: "Stock",
         description: "With great power, there must also come great responsibility",
         relevance: 11,
+        addShopCart: false
     },
     {
         name: "ILME-FX6V",
@@ -181,6 +192,7 @@ const products = [{
         stock: "Stock",
         description: "Includes a full-frame image sensor to expand your cinematic creativity",
         relevance: 12,
+        addShopCart: false
     },
     {
         name: "BDP-S6700",
@@ -196,6 +208,7 @@ const products = [{
         stock: "Stock",
         description: "Blu-ray™ Player with 4K Upscaling and Wi/Fi for Streaming Video",
         relevance: 13,
+        addShopCart: false
     },
     {
         name: "Final Fantasy VII remake",
@@ -211,14 +224,17 @@ const products = [{
         stock: "Stock",
         description: "A new adaptation of the masterpiece of the Japanese role",
         relevance: 14,
+        addShopCart: false
     },
 ];
 
 const productTemplate = (item) => {
+
     const product = document.createElement("a");
 
     let tagHtmlDiscount;
     let tagHtmlStock;
+    let addedToCart;
 
     if (item.is10discount) {
         tagHtmlDiscount = `<span class="product__tag product__tag--discount">10% OFF</span>`;
@@ -236,21 +252,30 @@ const productTemplate = (item) => {
         tagHtmlStock = `<span></span>`;
     }
 
+    if (item.addShopCart) {
+        addedToCart = `<img src="./images/add.png" class="addCart" id=${"s"+item.relevance}>`
+    } else {
+        addedToCart = `<img src="./images/notAdd.png" class="addCart" id=${"s"+item.relevance}>`
+    }
+
     if (item.isLarge) {
         product.className = "productLarge products";
         product.innerHTML = `
         <img src=${item.image} alt="" class="productLarge__image">
         <h5 class="productLarge__title">${item.name}</h5>
+        ${addedToCart}
+        <img src="./images/noFav.png" class="productLarge__favorite" id=${item.name}>
         <p class="productLarge__description">${item.description}</p>
         <h5 class="productLarge__price">${"$" + item.price}</h5>
     `;
     } else {
         product.className = "product products";
         product.innerHTML = `
-        <img src=${item.image} alt="" class="product__image">
-       
+        <img src=${item.image} alt="" class="product__image">     
         ${tagHtmlDiscount}
         ${tagHtmlStock}
+        ${addedToCart}
+        <img src="./images/noFav.png" class="product__favorite" id=${item.name}>
         <h5 class="product__title">${item.name}</h5>
         <p class="product__description">${item.description}</p>
         <h5 class="product__price">${"$" + item.price}</h5>
@@ -260,9 +285,12 @@ const productTemplate = (item) => {
     productSection.appendChild(product);
 };
 
+
 products.forEach((product) => {
     productTemplate(product);
 });
+
+
 
 const arrow1 = document.getElementById("arrow1");
 const arrow2 = document.getElementById("arrow2");
@@ -295,6 +323,8 @@ const orderBySelect = document.getElementById("orderBy");
 orderBySelect.addEventListener("change", (e) => {
     loadProducts();
 });
+
+
 
 const loadProducts = () => {
     const type = filterByType.value || "";
@@ -366,3 +396,54 @@ const loadProducts = () => {
         productTemplate(product);
     });
 };
+
+const favProducts = document.getElementsByClassName("product__favorite");
+const favProductsLarge = document.getElementsByClassName("productLarge__favorite");
+
+const favoriteSelection = (element) => {
+    element.addEventListener("click", () => {
+        if (isFav) {
+            element.src = "./images/noFav.png";
+            isFav = false;
+        } else {
+            element.src = "./images/fav.png";
+            isFav = true;
+        }
+    });
+};
+
+for (let i = 0; i < favProductsLarge.length; i++) {
+    const element = favProductsLarge[i];
+    favoriteSelection(element);
+}
+for (let i = 0; i < favProducts.length; i++) {
+    const element = favProducts[i];
+    favoriteSelection(element);
+}
+
+const cartShop = document.getElementsByClassName("addCart");
+
+const addSelection = (element) => {
+    element.addEventListener("click", () => {
+        products.forEach((product) => {
+            if (element.id === "s" + product.relevance) {
+                if (isAdd) {
+                    element.src = "./images/notAdd.png";
+                    product.addShopCart = false;
+                    isAdd = false;
+                } else {
+                    element.src = "./images/add.png";
+                    product.addShopCart = true;
+                    isAdd = true;
+                }
+                let productsAdded = products.filter((product) => product.addShopCart);
+                console.log(productsAdded);
+            }
+        });
+    });
+}
+
+for (let i = 0; i < cartShop.length; i++) {
+    const element = cartShop[i];
+    addSelection(element);
+}

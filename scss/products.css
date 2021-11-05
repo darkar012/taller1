@@ -49,6 +49,7 @@ h5 {
 .productLarge {
   width: 662px;
   display: block;
+  position: relative;
 }
 
 .productLarge__image {
@@ -63,6 +64,22 @@ h5 {
 .productLarge__description {
   margin-bottom: 48px;
   font-weight: 300;
+}
+
+.productLarge__favorite,
+.productLarge .addCart {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.productLarge .addCart {
+  right: 70px;
 }
 
 .product {
@@ -91,20 +108,20 @@ h5 {
   color: white;
 }
 
-.product__favorite {
+.product__favorite,
+.product .addCart {
   position: absolute;
   width: 40px;
   height: 35px;
   right: 20px;
   top: 20px;
   cursor: pointer;
-  background: url("../images/noFav.png") no-repeat;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-.product__favorite:hover {
-  background: url("../images/fav.png") no-repeat;
+.product .addCart {
+  right: 70px;
 }
 
 .product__tag--discount {
